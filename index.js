@@ -14,7 +14,21 @@ console.log(upperCaseFirstLastNames('kiera gonzalez'));
 
 // 2. Write a function that takes an array of lowercase words, return the words that have one or more 'e' but do not start with 'e'.
 
+function filterWordsContainingE(arr) {
+    const newArr = [];
+    
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i][0] !== "e") {
+            if (arr[i].includes("e")) {
+                newArr.push(arr[i]);
+            }
+        } 
+    }
+    return newArr;
+}
 
+console.log(filterWordsContainingE(["ellen", "jane", "zigland", "pedestrian"]));
+console.log(filterWordsContainingE(['red', 'lindsay', 'equine', 'drip']));
 
 // ["ellen", "jane", "zigland", "pedestrian"] => ["jane", "pedestrian"]
 
