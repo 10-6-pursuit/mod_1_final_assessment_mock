@@ -28,7 +28,25 @@ console.log(wordsWithE(['red', 'lindsay', 'equine', 'drip']));
 // ['red', 'lindsay', 'equine', 'drip'] => ['red'] 
 
 // 3. Write a function that takes a string of lowercase letters, and returns an object with a count of how many times each letter appears
+function objectLetter(string) {
+    const counter = {};
+    let str = string.split("");
+    for (let i = 0; i < str.length; i++) {
+        let test = str[i];
+        if (!counter[test]) {
+            counter[test] = 1;
+            continue;
+        } else {
+            counter[test]++;
+        
+        }
+        
+    }
+    return counter;
+}
 
+console.log(objectLetter("hello"));
+console.log(objectLetter("michael"));
 // 'asciiaske' => {
 //   'a' : 2, 
 //   's' : 2,
