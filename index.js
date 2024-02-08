@@ -1,6 +1,15 @@
 // Sample Module 1 Assessment:
 
 // 1. Given a string of two words, both made of only lowercase letters, write a function that returns the same string, with the first letter of each word capitalized
+function capitalizeFirstLetter(string) {
+    let words = string.split(" ");
+    let capitalizedWords = words.map((word) => word.charAt(0).toUpperCase() + word.slice(1));
+
+    return capitalizedWords.join(" ");
+}
+
+console.log(capitalizeFirstLetter("mickey mouse"));
+console.log(capitalizeFirstLetter('kiera gonzalez'));
 
 // 'mickey mouse' => 'Mickey Mouse'
 // 'kiera gonzalez' => 'Kiera Gonzalez'
