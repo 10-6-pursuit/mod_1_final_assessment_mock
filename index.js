@@ -7,15 +7,12 @@
  
 function capitalizeFirstLetterOfEachWord(string){
 
-    let newArray=string.split(` `)
+    let newArray=string.split(` `);
 
-    for(let i=0;i<newArray.length;i++){
-        
-      
-    }
-    return newArray
+    return newArray.map(el=>el[0].toUpperCase()+el.slice(1)).join(` `);
+    
 }
-console.log(capitalizeFirstLetterOfEachWord('kiera gonzalez'))
+console.log(capitalizeFirstLetterOfEachWord('ayyoub belibel'))
 
 
 // 2. Write a function that takes an array of lowercase words, return the words that have one or more 'e' but do not start with 'e'.
@@ -24,6 +21,7 @@ console.log(capitalizeFirstLetterOfEachWord('kiera gonzalez'))
 
 // ['red', 'lindsay', 'equine', 'drip'] => ['red'] 
 function wordsThatIncludesE(array){
+
 return array.filter(el=>el.includes(`e`)&&el[0]!==`e`);
 
 }
@@ -33,11 +31,17 @@ console.log(wordsThatIncludesE(["ellen", "jane", "zigland", "pedestrian"] ))
 
 // 3. Write a function that takes a string of lowercase letters, and returns an object with a count of how many times each letter appears
 function countOccurencesOfEachLetter(string){
-    let obj={}
+
+    let obj={};
+
     for(letter of string){
-        obj[letter]?obj[letter]++:obj[letter]=1
+
+        obj[letter]?obj[letter]++:obj[letter]=1;
+
     }
-    return obj
+
+    return obj;
+    
 }
 console.log(countOccurencesOfEachLetter(`asciiaske`))
 
