@@ -6,7 +6,7 @@
 // 'kiera gonzalez' => 'Kiera Gonzalez'
 
 function capitalizeEachWord(str) {
-    return str.split(" ").map(ele => ele[0].toUpperCase() + ele.slice(1)).join(" ")
+    return str.split(" ").map(ele => ele[0].toUpperCase() + ele.slice(1)).join(" ");
 }
 
 // 2. Write a function that takes an array of lowercase words, return the words that have one or more 'e' but do not start with 'e'.
@@ -14,6 +14,16 @@ function capitalizeEachWord(str) {
 // ["ellen", "jane", "zigland", "pedestrian"] => ["jane", "pedestrian"]
 
 // ['red', 'lindsay', 'equine', 'drip'] => ['red'] 
+
+function returnWords(arr) {
+    let answerArray = [];
+
+    for (let word of arr) {
+        if (word.includes("e") && word[0] !== "e") answerArray.push(word)
+    }
+
+    return answerArray;
+}
 
 // 3. Write a function that takes a string of lowercase letters, and returns an object with a count of how many times each letter appears
 
