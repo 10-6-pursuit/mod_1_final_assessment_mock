@@ -11,7 +11,7 @@ function capitalizeFirstLetterOfEachWord(string){
 
     for(let i=0;i<newArray.length;i++){
         
-
+      
     }
     return newArray
 }
@@ -32,9 +32,15 @@ console.log(wordsThatIncludesE(["ellen", "jane", "zigland", "pedestrian"] ))
 
 
 // 3. Write a function that takes a string of lowercase letters, and returns an object with a count of how many times each letter appears
-function countOccurencesOfEachLetter(){
-    
+function countOccurencesOfEachLetter(string){
+    let obj={}
+    for(letter of string){
+        obj[letter]?obj[letter]++:obj[letter]=1
+    }
+    return obj
 }
+console.log(countOccurencesOfEachLetter(`asciiaske`))
+
 // 'asciiaske' => {
 //   'a' : 2, 
 //   's' : 2,
