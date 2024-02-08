@@ -5,6 +5,8 @@
 // 'mickey mouse' => 'Mickey Mouse'
 // 'kiera gonzalez' => 'Kiera Gonzalez'
 
+const capitalize = (str) => str.split(' ').map((word) => word[0].toUpperCase() + word.slice(1)).join(' ');
+
 // 2. Write a function that takes an array of lowercase words, return the words that have one or more 'e' but do not start with 'e'.
 
 // ["ellen", "jane", "zigland", "pedestrian"] => ["jane", "pedestrian"]
