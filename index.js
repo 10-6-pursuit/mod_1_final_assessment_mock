@@ -36,6 +36,22 @@ console.log(filterWordsContainingE(['red', 'lindsay', 'equine', 'drip']));
 
 // 3. Write a function that takes a string of lowercase letters, and returns an object with a count of how many times each letter appears
 
+function countLetters(str) {
+    let newObj = {};
+    let newArr = str.split("")
+
+    for (let i = 0; i < newArr.length; i++) {
+        if(!newObj[newArr[i]]) {
+            newObj[newArr[i]] = 1;
+        } else if (newObj[newArr[i]]) {
+            newObj[newArr[i]] = newObj[newArr[i]] + 1;
+        }
+    }
+    return newObj;
+}
+
+console.log(countLetters('asciiaske'));
+
 // 'asciiaske' => {
 //   'a' : 2, 
 //   's' : 2,
