@@ -2,10 +2,19 @@
 
 // 1. Given a string of two words, both made of only lowercase letters, write a function that returns the same string, with the first letter of each word capitalized
 
+function upperCaseFirstLastNames(str) {
+    return str.split(" ").map(word => word = word[0].toUpperCase() + word.slice(1)).join(" ");
+}
+
+console.log(upperCaseFirstLastNames('mickey mouse'));
+console.log(upperCaseFirstLastNames('kiera gonzalez'));
+
 // 'mickey mouse' => 'Mickey Mouse'
 // 'kiera gonzalez' => 'Kiera Gonzalez'
 
 // 2. Write a function that takes an array of lowercase words, return the words that have one or more 'e' but do not start with 'e'.
+
+
 
 // ["ellen", "jane", "zigland", "pedestrian"] => ["jane", "pedestrian"]
 
