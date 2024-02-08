@@ -35,3 +35,13 @@ function returnWords(arr) {
 //   'k' : 1, 
 //   'e' : 1
 // }
+
+function getFrequencyOfLetters(str) {
+    let frequencyObj = {};
+
+    for (let char of str) {
+        frequencyObj[char] = frequencyObj[char] + 1 || 1;
+    }
+
+    return frequencyObj;
+}
