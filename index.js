@@ -18,9 +18,18 @@ console.log(captilizeWords('Mickey Mouse'));
 
 
 function wordsWithMultiple(arrOflowerCase) {
-    
+    let newArr = []
+
+    for (let word of arrOflowerCase) {
+        if(word.includes('e') && !word[0].includes('e')) {
+            newArr.push(word)
+        }
+    }
+
+    return newArr;
 } 
 
+console.log(wordsWithMultiple(["ellen", "jane", "zigland", "pedestrian"]))
 // 
 
 // ["ellen", "jane", "zigland", "pedestrian"] => ["jane", "pedestrian"]
