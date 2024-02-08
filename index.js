@@ -32,3 +32,12 @@ function getWordsWithE(words) {
 //   'k' : 1, 
 //   'e' : 1
 // }
+
+function getCountOfLetters(str) {
+    const letters = str.split('');
+    const result = {};
+    for (let letter of letters) {
+        result[letter] = result[letter] + 1 || 1;
+    }
+    return result;
+}
