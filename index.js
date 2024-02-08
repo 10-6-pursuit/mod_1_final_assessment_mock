@@ -6,6 +6,13 @@
 // 'kiera gonzalez' => 'Kiera Gonzalez'
 
 // 2. Write a function that takes an array of lowercase words, return the words that have one or more 'e' but do not start with 'e'.
+function wordsWithE(array) {
+    return array.filter(word => word.includes("e") && !word.startsWith("e"));
+}
+
+
+console.log(wordsWithE(["ellen", "jane", "zigland", "pedestrian"]));
+console.log(wordsWithE(['red', 'lindsay', 'equine', 'drip']));
 
 // ["ellen", "jane", "zigland", "pedestrian"] => ["jane", "pedestrian"]
 
