@@ -35,7 +35,8 @@ const wordsWithEThatDontStartWithE = arr =>{
 }
 
 
-// 3. Write a function that takes a string of lowercase letters, and returns an object with a count of how many times each letter appears
+// 3. Write a function that takes a string of lowercase letters, 
+//and returns an object with a count of how many times each letter appears
 
 // 'asciiaske' => {
 //   'a' : 2, 
@@ -45,4 +46,19 @@ const wordsWithEThatDontStartWithE = arr =>{
 //   'k' : 1, 
 //   'e' : 1
 // }
+
+const ocurrencesOnString = str => {
+
+    let obj = {};
+
+    for(let letter of str){
+        if(obj[letter]){
+            obj[letter]++
+        } else {
+            obj[letter] = 1;
+        }
+    }
+
+    return obj;
+}
 
