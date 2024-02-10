@@ -2,7 +2,7 @@
 
 // 1. Given a string of two words, both made of only lowercase letters, write a function that returns the same string, with the first letter of each word capitalized
 function capitalizedString(str) {
-    return str.toUpperCase();
+    return str.split(" ").map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(" ");
 }
 console.log(capitalizedString('marcus browne'));
 
@@ -13,7 +13,7 @@ console.log(capitalizedString('marcus browne'));
 function returnUniqueWords(arr) {
     let newArray = [];
     for (let i = 0; i < arr.length; i++) {
-        if (arr[i].includes("e")) {
+        if (arr[i].includes("e") && !arr[i].startsWith("e")) {
             newArray.push(arr[i]);
         } 
     }
@@ -28,16 +28,14 @@ console.log(returnUniqueWords(["ellen", "jane", "zigland", "pedestrian"]))
 
 // 3. Write a function that takes a string of lowercase letters, and returns an object with a count of how many times each letter appears
 function returnLetterCount(str) {
-    let count = [];
-    for (let i = 0; i < str.length; i++) {
-        if (str[i].length === 1) {
-            count.push(str[i]);
+    let count = {}
+    for (let char of str) {
+        if (char >= "a" && char <= "z") {
+            count[char] = (count[char] || 0) + 1;
         }
     }
-    return count;
-
-
-}
+    return count
+}   
 console.log(returnLetterCount('marcus'));
 
 // 'asciiaske' => {
